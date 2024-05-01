@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import Tweet from "./components/Tweet";
 
@@ -39,8 +40,11 @@ const tweetsArray = [
 
 function App() {
   return (
-    <div className="App">
-      <Tweet />
+    <div className="App"> 
+       {tweetsArray.map(tweet => {
+        return <Tweet tweets={tweet}/>
+      })
+      }    
     </div>
   );
 }
